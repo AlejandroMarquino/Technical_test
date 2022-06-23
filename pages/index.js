@@ -10,7 +10,7 @@ export default function Home({data}) {
   React.useEffect(()=>{
     const fetchVenues = async () =>{
       const newData = await getVenues(data);
-      setDataWithVenues(newData.events)
+      setDataWithVenues(newData?.events)
     }
     fetchVenues()
   },[data, setDataWithVenues])
@@ -51,7 +51,7 @@ export default function Home({data}) {
           <button onClick={() => setFilterState('physicals')} className={`${filterState === 'physicals' ? 'active' : ''} hola`}>Physicals Events</button> 
           <button onClick={() => setFilterState('online')}  className={`${filterState === 'online' ? 'active' : ''} adios`}>Online Events</button>
         </div>
-        <h1 className={styles.title}>Next events list:</h1>
+        <h1 className={styles.title} data-testid='header'>Next events list:</h1>
         <div className={styles.eventList}>{filteredList()}</div>
       </main>
       </div>
@@ -75,7 +75,7 @@ export async function getStaticProps () {
         return error
     }
 }
-const requestVenueForEvent = async (ev) => {
+export const requestVenueForEvent = async (ev) => {
   try {
     const venueRequest = await fetch(`https://www.eventbriteapi.com/v3/venues/${ev.venue_id}/?token=${PRIVATE_TOKEN}`);
     const venue = await venueRequest.json();
@@ -87,7 +87,7 @@ const requestVenueForEvent = async (ev) => {
 // bucle que recorre los valores de Venue y los almacena en un array para poder filtrarlos por ciudad   
 }
 const getVenues = async (data) => {
-    for (let i = 0; i < data.events.length; i++) {
+    for (let i = 0; i < data?.events.length; i++) {
       data.events[i].venue = await requestVenueForEvent(data.events[i]);
     }
     return data;
