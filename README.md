@@ -106,7 +106,7 @@ yarn dev
 
 to run de test, use ' npm test ' 
 ```
-Open [http://localhost:3000](http://localhost:3000) para navegar por la plataforma. 
+Open [http://localhost:3000](http://localhost:3000) to navigate on the platform. 
 
 On the landing page, the user can filter physical and online events with the buttons above.
 
