@@ -30,7 +30,7 @@ I want a DB that everybody to be able to follow along:
 - No external software to install required
 - ***Most people understand*** SQL lenguaje (not everybody has worked with MongoDB or Oracle for example)
 
-(In this part of the project I had doubts what information I should save in the database, thats way I preferred to continue the parts I didn't have doubts about.
+(In this part of the project I had doubts what of what information I should save in the database, that is why I preferred to continue the parts I didn't have doubts about.
 The database is integrated inside the project ../migrations/database.sql ; but It is not functional.)
 
 Once I chose the technologies, I worked with the documents of the technology that I was going to use to start the project. 
