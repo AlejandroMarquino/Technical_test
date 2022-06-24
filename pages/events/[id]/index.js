@@ -2,32 +2,36 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
 
-
-//crear una página plantilla para los eventos. 
+// Template page for the events with components.
 export default function Event({data}){
-
     console.log(data)
-    return (<div>
-
-    <img src={data.logo.original.url}/>
-    <p>{data.name.text}</p>
-    <p>{data.description.text}</p> {/*utilizamos .text para crearlo más rápido. Con .HTML deberíamos sanear el código*/}
-    <p>{data.start.utc} UTC</p>
-    <p>{data.end.utc} UTC</p>
-    <Link href={`/events/${data.id}/ticket`} key={data.id}>
-     <a> ticket </a>
-     </Link>
+    return (
+    <div className='main'>
+    <div className='eventCard'>
+        <div className='cardImg'>
+            <Image src={data.logo.original.url} layout='fill' objectFit='cover'/>
+        </div>
+        <div className='cardInfo'>
+            <p className='cardDate'>{new Date(data.start.utc).toLocaleDateString()} - {new Date(data.end.utc).toLocaleDateString()}</p>
+            <p className='cardTitle'>{data.name.text}</p>
+            <p className='cardDescription'>{data.description.text}</p> {/*use .text to create it faster. With .HTML we should sanitize the code*/}
+             <Link href={`/events/${data.id}/ticket`} key={data.id}>
+                <a className='buttonTicket'> Tickets </a>
+            </Link>
+        </div>
+    </div>
     </div>
     )
 }
 
+//function to output all possible routes to the events.
+const PRIVATE_TOKEN = process.env.NEXT_PUBLIC_PRIVATE_TOKEN
+const PRIVATE_ID_ORG = process.env.NEXT_PUBLIC_PRIVATE_ID_ORG
 
-// Creamos una función para que saque todas las posibles rutas a los eventos. 
 export async function getStaticPaths (){
     try{
-      const res = await fetch ('https://www.eventbriteapi.com//v3/organizations/1022662212373/events/?token=FF72ICWRLR4FK3FJYJI3')
+      const res = await fetch (`https://www.eventbriteapi.com//v3/organizations/${PRIVATE_ID_ORG}/events/?token=${PRIVATE_TOKEN}`)
       const data = await res.json()
       const paths = data.events.map(({id}) => ({params: {id: `${id}`}}))
       return {
@@ -40,8 +44,8 @@ export async function getStaticPaths (){
     }
 }
 
-// Llamamos a la api para que nos devuelva los datos de UN evento único
-// lo haremos modificando el fetch para que en lugar de llamar a todos los eventos, llame a un sólo evento. 
+// call the api to return the data of ONE unique event
+// do this by modifying the fetch so that instead of calling all events, it calls just one event.
 export async function getStaticProps ({params}) {
     try{
       const res = await fetch (`https://www.eventbriteapi.com/v3/events/${params.id}/?token=FF72ICWRLR4FK3FJYJI3`)
