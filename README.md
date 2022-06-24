@@ -90,7 +90,7 @@ Así que :thinking: pensé que quizás se había producido algún changelog en l
 
 A partir de ese momento ya pude trabajar perfectamente con la API y seguir desarrollando la tarea y el proyecto :sweat_smile:. 
 
-### Y eso es todo! :smile: Muchas gracias por ofrecerme la oportunidad de realizar este Techical Test para el Intership Program :smile:. Todo feedback es bien recibido porque me ayudará a mejorar mis skills.
+### Y eso es todo! :smile: Muchas gracias por ofrecerme la oportunidad de realizar este Techical Test para el Intership Program :blush:. Todo feedback es bien recibido porque me ayudará a mejorar mis skills.
 
 ### **Ahora es momento de empezar a usar la plataforma!!** 
 
