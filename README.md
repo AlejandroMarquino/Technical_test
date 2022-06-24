@@ -8,7 +8,7 @@ In this Readm.me I'm going to explain and document how was the platform develop 
 
 ## ***How would you split the project in milestones?***
 
-The first step was ***the workflow design*** the workflow design that I was going to follow to get the idea, in a structured way, of what milestones did I need to develop and when to do it.
+The first step was ***the workflow design*** that I was going to follow to get the idea, in a structured way, of what milestones did I need to develop and when to do it.
 
 For the diagrams and designs I have used Draw.io and Figma. 
 
