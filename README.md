@@ -74,23 +74,6 @@ The next thing I would have implemented would be a registration and login system
 
 I would also have debugged and worked on the database part.
 
-## ***What do you think is the most complex part of the exercise?***
-
-The part that has required most of my time and maybe the one that is the most complex has been to start working with the API and get it to return the complete information of the events and be able to extract the data that I wanted to show in the application. / platform. At this point I was stuck because when looking at the API documentation in this section: https://www.eventbrite.com/platform/docs/api-explorer ; and following the steps indicated to me did not get it to work. I inspected the API endpoints from the browser and the information of my user was returned to me correctly but not that of the events.
-
-![webAPIuserOk](https://user-images.githubusercontent.com/90139066/175543802-9dbc71b9-f51d-4699-ae1e-8038c0e14888.png)
-![webAPIevents404](https://user-images.githubusercontent.com/90139066/175543824-f4972538-f00f-4461-ac4c-c4f60d169aa7.png)
-
-I also noticed that in the documentation it indicated an endpoint (users/me/owned_events/...) in the title of the example but in the description it showed another endpoint (users/me/events/...
-
-![endpoints not match](https://user-images.githubusercontent.com/90139066/175544068-ebd81fed-0ada-42ce-a822-d19793862e91.jpg)
-
-So :thinking: I thought maybe there was some changelog in the documentation :thinking:, so my next step was to check it (https://www.eventbrite.com/platform/docs/changelog) and I noticed that the documentation of how to get events via the EB API
-
-![changelogAPI](https://user-images.githubusercontent.com/90139066/175544563-1b2affb5-efb0-49a4-9be6-7ec1cf6dddb1.png)
-
-From that moment I was able to work perfectly with the API and continue developing the task and the project :sweat_smile:.
-
 ### And that's it! :smile: Thank you very much for offering me the opportunity to take this Technical Test for the Intership Program :blush:. All feedback is well received because it will help me improve my skills.
 
 ### **Now it's time to start using the platform !!!** 
