@@ -1,4 +1,4 @@
-# Welcome to my Technical Test for Internship Program of Eventbrite.
+# Welcome to my Technical Test for Internship Program.
 
 In this Readm.me I'm going to explain and document how was the platform develop and the ***decisions I have made***.
 
@@ -18,7 +18,7 @@ For the diagrams and designs I have used Draw.io and Figma.
 
 Once I have checked the requirements and functions they platform must perform, I decided which Technology I was going to use. My strong skills are back-end technologies, like Python and its framework Django, or Java and its framework Spring. So ***I chose a technology that made me easy to develop the front-end part*** of the project and also allowed me to use CSS styles and implement database. Another important point of my choice was choosing a technology that has a ***good documentation*** that helps me.  
 
-I also took a look of the documents of the Eventbrite API..
+I also took a look of the documents of the API..
 
 The platform is develop in Next.Js, which documentation can be found in https://nextjs.org/docs , with CSS styles and SQL databases.
 
